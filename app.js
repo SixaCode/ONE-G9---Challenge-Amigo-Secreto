@@ -19,5 +19,21 @@ function agregarAmigo () {
     }
 }
 
+function sortearAmigo () {
+    if (amigos.length == 0) {
+        alert("Agrega amigos.");
+        return;
+    }
+
+    amigoAleatorio = aleatorio(0,amigos.length);
+
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = amigos[amigoAleatorio];
+}
+
+function aleatorio(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 let amigos = [];
 
